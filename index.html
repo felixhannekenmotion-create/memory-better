@@ -152,7 +152,7 @@
       <a href="#buchen">Buchen</a>
       <a href="#partner">Für Locations</a>
       <a href="#faq">FAQ</a>
-      <a class="nav-cta" href="https://ig.me/m/memory.better.live" target="_blank" rel="noopener">Anfragen</a>
+      <a class="nav-cta" href="mailto:memory.better.collab@gmail.com?subject=Anfrage%20Audiog%C3%A4stebuch%20%E2%80%93%20memory.better">Anfragen</a>
     </nav>
     <button class="burger" id="burger" aria-label="Menü">☰</button>
   </div>
@@ -165,7 +165,7 @@
     <h1>Stimmen, die für immer bleiben</h1>
     <p>Eure Gäste hinterlassen über ein elegantes Vintage-Telefon eine persönliche Sprachnachricht – und ihr behaltet die schönsten Momente eurer Hochzeit für immer.</p>
     <div class="hero-btns">
-      <a class="btn" href="https://ig.me/m/memory.better.live" target="_blank" rel="noopener">Jetzt anfragen</a>
+      <a class="btn" href="mailto:memory.better.collab@gmail.com?subject=Anfrage%20Audiog%C3%A4stebuch%20%E2%80%93%20memory.better">Jetzt anfragen</a>
       <a class="btn btn-ghost" href="#pakete">Angebot ansehen</a>
     </div>
   </div>
@@ -318,8 +318,8 @@
         <div class="row"><span id="sSchild">Schild: Klassisch</span><span>gratis</span></div>
         <div id="sExtras"></div>
         <div class="total"><span class="kicker" style="align-self:center">Gesamt</span><b id="sTotal">149 €</b></div>
-        <a class="btn" id="cfgBtn" href="#">Anfrage kopieren &amp; DM öffnen</a>
-        <div class="hint">Einführungspreis · unverbindlich. Eure Anfrage wird kopiert – fügt sie im geöffneten Instagram-Chat einfach ein (lange tippen → einfügen).</div>
+        <a class="btn" id="cfgBtn" href="#">Anfrage per E-Mail senden</a>
+        <div class="hint">Einführungspreis · unverbindlich. Der Button öffnet euer E-Mail-Programm mit der fertigen Anfrage – ihr müsst nur noch auf „Senden" tippen.</div>
         <textarea id="cfgMsg" readonly></textarea>
       </div>
     </div>
@@ -328,7 +328,7 @@
 
 <script>
 (function(){
-  var IG="https://ig.me/m/memory.better.live";
+  var MAIL="memory.better.collab@gmail.com";
   var BASE=149;
   function euro(n){return n+" €";}
   function calc(){
@@ -363,11 +363,12 @@
       +"• Gesamt: "+s.total+" €\n\nName:\nOrt der Feier:";
     var ta=document.getElementById('cfgMsg');
     ta.style.display="block"; ta.value=msg;
-    if(navigator.clipboard){navigator.clipboard.writeText(msg).catch(function(){});}
+    var subject="Buchungsanfrage Audiogästebuch – memory.better";
+    var mailto="mailto:"+MAIL+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(msg);
+    window.location.href=mailto;
     var btn=document.getElementById('cfgBtn');
-    btn.textContent="Kopiert ✓ – im Chat einfügen";
-    window.open(IG,"_blank","noopener");
-    setTimeout(function(){btn.textContent="Anfrage erneut kopieren";},2500);
+    btn.textContent="E-Mail wird geöffnet …";
+    setTimeout(function(){btn.textContent="Anfrage per E-Mail senden";},2500);
   });
 })();
 </script>
@@ -404,7 +405,7 @@
         <li>Attraktive Vermittlungsprovision pro Buchung</li>
         <li>Kostenloses Showcase bei eurer nächsten Hochzeit</li>
       </ul>
-      <p style="margin-top:22px"><a class="btn" href="https://ig.me/m/memory.better.live" target="_blank" rel="noopener">Partner werden</a></p>
+      <p style="margin-top:22px"><a class="btn" href="mailto:memory.better.collab@gmail.com?subject=Anfrage%20Audiog%C3%A4stebuch%20%E2%80%93%20memory.better">Partner werden</a></p>
     </div>
   </div>
 </section>
@@ -445,7 +446,7 @@
     <div class="kicker">Jetzt sichern</div>
     <h2>Sichert euch euer Datum</h2>
     <p>Wir sind frisch gestartet und vergeben gerade besondere Konditionen für die ersten Hochzeiten. Schreibt uns – wir freuen uns auf euch.</p>
-    <a class="btn" href="https://ig.me/m/memory.better.live" target="_blank" rel="noopener">Anfragen per Instagram-DM</a>
+    <a class="btn" href="mailto:memory.better.collab@gmail.com?subject=Anfrage%20Audiog%C3%A4stebuch%20%E2%80%93%20memory.better">Anfragen per E-Mail</a>
   </div>
 </section>
 
@@ -463,7 +464,7 @@
       </div>
       <div>
         <div style="color:#fff;margin-bottom:8px;font-weight:600">Kontakt</div>
-        <div><a href="https://instagram.com/memory.better.live" target="_blank" rel="noopener">Instagram: @memory.better.live</a><br>Anfragen per DM</div>
+        <div><a href="mailto:memory.better.collab@gmail.com">memory.better.collab@gmail.com</a><br><a href="https://instagram.com/memory.better.live" target="_blank" rel="noopener">Instagram: @memory.better.live</a></div>
       </div>
     </div>
     <div class="fnote">© 2026 memory.better · Hinweis: Impressum &amp; Datenschutz vor dem Livegang ergänzen.</div>
